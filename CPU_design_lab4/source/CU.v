@@ -14,7 +14,7 @@ module CU(
 	 output reg   writeback_select_enable,	
 	 output reg   mux1_select_enable,		
 	 output reg   mux2_select_enable,		
-	 output reg   [5:0] alu_op,				
+	 output reg   [10:0] alu_op,				
 	 output reg   mem_write_enable,			
 	 output reg   mem_data_select_enable
     );

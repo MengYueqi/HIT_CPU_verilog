@@ -81,7 +81,7 @@ module cpu (
 	wire 		  writeback_select_enable;
 	wire 		  mux1_select_enable;
 	wire       mux2_select_enable;
-	wire [5:0] alu_op;
+	wire [10:0] alu_op;
 	wire       mem_write_enable;
 	wire       mem_data_select_enable;
 	
