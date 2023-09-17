@@ -29,7 +29,6 @@ module CU(
 
 	
 	reg [4:0] STATE;
-	reg [4:0] NEXT_STATE;
 	
 	always@(negedge clk) begin
 	if(reset == 0) begin

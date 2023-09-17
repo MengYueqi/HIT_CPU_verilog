@@ -1,4 +1,3 @@
-
 module DMEM(
     input [31:0]  alu_address,	
     input [31:0]  data,			
@@ -13,7 +12,7 @@ module DMEM(
 	integer i;
 	
 	initial begin
-		$readmemh("C:/Users/16911/Desktop/cpu_design/data_data.txt", memory);
+		$readmemh("../data_data.txt", memory);
 	end
 	
 	assign out = memory[alu_address / 4];
