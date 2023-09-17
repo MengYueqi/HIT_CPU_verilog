@@ -46,4 +46,4 @@ J    0              // back to start
 ## 参考资料
 - <a href="https://verilogguide.readthedocs.io/en/latest/">FPGA designs with Verilog</a>
 - <a href="https://blog.csdn.net/zhang_qing_yun/article/details/121049946">设计并实现一个单周期非流水的CPU（哈工大计组实验二：给定指令系统的处理器设计）</a>
-- 感谢<a href="https://claude.ai/chats">Claude</a>对项目的大力支持。
+- 感谢<a href="https://claude.ai/chats">Claude</a>对项目的大力支持
