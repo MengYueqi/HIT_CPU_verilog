@@ -55,7 +55,7 @@ J    0              // back to start
 
 Lab1为设计一个五级流水MIPS CPU，可以执行主要的MIPS指令，具体的体系结构如下图所示：
 
-设计文件在source文件夹内，仿真文件在sim文件夹内。关于流水线CPU的具体设计方案以及各个部件的实现原理，请到<a href='./Computer_architecture_lab1/README.md'>这里</a>查看。 \
+设计文件在source文件夹内，仿真文件在sim文件夹内。关于流水线CPU的具体设计方案以及各个部件的实现原理，请到<a href='./Computer_Architecture_lab1/README.md'>这里</a>查看。 \
 所使用的测试用例为：
 #### 基础测试
 
