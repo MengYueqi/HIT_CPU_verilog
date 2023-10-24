@@ -3,8 +3,7 @@
 - 处理器设计是哈工大2023年第一次开设的课程，在这里把verilog设计代码分享给大家，仅供参考。
 Lab1-3中每个文件夹有两个文件，其中一个为设计文件，另一个有下划线标注后缀的为激励文件。在Lab4中，有两个文件夹，其中source文件夹中为设计文件，sim文件夹中为测试文件。设计文件中初始化数据文件的路径已被隐去，请自行添加。 \
 哈工大处理器设计实验要求：https://hit-coa.gitlab.io/hit-cdp-lab/intro/intro.html
-- 计算机体系结构共有3个实验，在这里将verilog的代码分享给大家，仅供大家参考，拓宽思路。
-实验的设计文件和仿真文件在每个实验对应的文件夹下，其中测试用例的路径已隐去，具体使用的测试用例已在说明中给出。 \
+- 计算机体系结构共有3个实验，在这里将verilog的代码分享给大家，仅供大家参考，拓宽思路。每个Lab中都有2个文件夹，source文件夹中存储设计文件，sim中存储测试文件。其中测试用例的路径已隐去，具体使用的测试用例已在readme中给出。 \
 哈工大计算机体系结构实验要求：https://hit-coa.gitlab.io/archlab/
 
 
@@ -190,6 +189,12 @@ for i in range(0, 124, 4):
 0x0074:  02 60 50 0A    movz $10, $19, $0        // $10 <= 0x08
 ```
 
+
+### Computer_Architecture_Lab2 ###
+Lab2为设计一个分支预测器，要求预测的成功率在80%以上。使用BTB存储跳转指令历史行为及跳转方向，使用BPB模型进行分支预测即可达到80%的正确率。
+BPB模型如下图所示：
+![graph](./Computer_Architecture_lab2/BPB_branch_predict.png)
+具体BPB和BTB的实现已在对应的文件夹内。但由于CPU相关的代码是由哈工大的老师开发完成，故相关的CPU设计文件暂不上传，仅上传分支预测模块。
 
 ## 参考资料
 - <a href="https://verilogguide.readthedocs.io/en/latest/">FPGA designs with Verilog</a>
