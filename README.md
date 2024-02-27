@@ -196,6 +196,41 @@ BPB模型如下图所示：
 ![graph](./Computer_Architecture_lab2/BPB_branch_predict.png)
 具体BPB和BTB的实现已在对应的文件夹内。但由于CPU相关的代码是由哈工大的老师开发完成，故相关的CPU设计文件暂不上传，仅上传分支预测模块。
 
+### Computer_Architecture_Lab3 ###
+Lab3为设计一个指令Cache，要求指令Cache至少为2路，设置相关的替换规则。这里要求完成Cache与上层寄存器之间的通信接口，和下层主存之间的通信接口。具体的接口类型如下所示：
+
+```
+module cache (
+    input            clk             ,  // clock, 100MHz
+    input            rst             ,  // active low
+
+    //  Sram-Like接口信号，用于CPU访问Cache
+    input         cpu_req      ,    //由CPU发送至Cache
+    input  [31:0] cpu_addr     ,    //由CPU发送至Cache
+    output [31:0] cache_rdata  ,    //由Cache返回给CPU
+    output        cache_addr_ok,    //由Cache返回给CPU
+    output        cache_data_ok,    //由Cache返回给CPU
+
+    //  AXI接口信号，用于Cache访问主存
+    output [3 :0] arid   ,              //Cache向主存发起读请求时使用的AXI信道的id号
+    output [31:0] araddr ,              //Cache向主存发起读请求时所使用的地址
+    output        arvalid,              //Cache向主存发起读请求的请求信号
+    input         arready,              //读请求能否被接收的握手信号
+
+    input  [3 :0] rid    ,              //主存向Cache返回数据时使用的AXI信道的id号
+    input  [31:0] rdata  ,              //主存向Cache返回的数据
+    input         rlast  ,              //是否是主存向Cache返回的最后一个数据
+    input         rvalid ,              //主存向Cache返回数据时的数据有效信号
+    output        rready                //标识当前的Cache已经准备好可以接收主存返回的数据
+);
+
+    /*TODO：完成指令Cache的设计代码*/
+
+endmodule
+```
+
+接口的实现以放在对应的文件夹中。但由于CPU相关的代码是由哈工大的老师开发完成，故相关的CPU设计文件暂不上传，仅Cache模块。
+
 ## 参考资料
 - <a href="https://verilogguide.readthedocs.io/en/latest/">FPGA designs with Verilog</a>
 - <a href="https://blog.csdn.net/zhang_qing_yun/article/details/121049946">设计并实现一个单周期非流水的CPU（哈工大计组实验二：给定指令系统的处理器设计）</a>
